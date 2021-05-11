@@ -38,9 +38,12 @@ public class Schwein implements Comparable<Schwein>{
 		return gewicht - other.gewicht;
 	}
 
-	
-	public void fressen() {
+	public Schwein fressen() {
 		gewicht ++;
+		return this;
 	}
+
+	
+	
 
 }
