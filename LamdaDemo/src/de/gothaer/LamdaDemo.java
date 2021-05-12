@@ -1,5 +1,6 @@
 package de.gothaer;
 
+import java.util.Iterator;
 import java.util.function.Consumer;
 
 public class LamdaDemo {
@@ -10,6 +11,10 @@ public class LamdaDemo {
 	}
 
 	private void go() {
+		
+		Iterator<String> it;
+		
+		
 
 		final Runnable runnable = ()->{System.out.println("Mein erster LamdaAusdruck");};  // Lokale Methode, anonym
 		final Runnable r2 = this::anonym;
