@@ -45,7 +45,7 @@ public class MyStreamDemo {
 //		ergebnis.forEach((key, value)-> System.out.printf("Summe von %s ist %s\n", key, value));
 		
 		//int summe  = schweineStream.mapToInt(s->s.getGewicht()).sum();
-		int summe  = schweineStream.mapToInt(Schwein::getGewicht).sum();
+		int summe  = schweineStream.parallel().mapToInt(Schwein::getGewicht).sequential().max().getAsInt();
 		System.out.println(summe);
 	}
 	
